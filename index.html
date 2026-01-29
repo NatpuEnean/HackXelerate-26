@@ -11,18 +11,39 @@
       <div class="overlay"></div>
       <div class="hero-1-container">
         <div class="hero-main-container">
+        <div class="countdown">
+  <div class="time-box">
+    <span id="days">00</span>
+    <small>DAYS</small>
+  </div>
+  <div class="time-box">
+    <span id="hours">00</span>
+    <small>HOURS</small>
+  </div>
+  <div class="time-box">
+    <span id="minutes">00</span>
+    <small>MINUTES</small>
+  </div>
+  <div class="time-box">
+    <span id="seconds">00</span>
+    <small>SECONDS</small>
+  </div>
+</div>
+
           <img
             class="hero-main-logo"
             draggable="false"
             src="/Frame 2 (1).webp"
-            alt="gta logo"
+            alt="HackXelerate logo"
           />
+          
           <img
             class="hero-main-image"
             draggable="false"
             src="/a.webp"
-            alt="gta logo"
+            alt="Joker image"
           />
+         
         </div>
         <div class="hero-text-logo-container">
           <div class="hero-text-logo"></div>
@@ -35,26 +56,88 @@
           </div>
         </div>
       </div>
-  <div class="hero-2-container">
-  <h2 class="event-heading">Event starts in</h2>
-
-  <div class="countdown" id="countdown">
-    <div><span id="days">00</span><small>Days</small></div>
-    <div><span id="hours">00</span><small>Hours</small></div>
-    <div><span id="minutes">00</span><small>Minutes</small></div>
-    <div><span id="seconds">00</span><small>Seconds</small></div>
+      <div class="hero-2-container">
+  <div id="galleryh" class="gallery-section">
+    <img src="https://picsum.photos/id/10/800/500" alt="Cover" class="cover-image">
+    <button id="openBtn" class="action-btn">View Gallery</button>
   </div>
 
-  <button class="register-btn">Register Now</button>
+  <div id="gallery" class="gallery-view hidden">
+    <button id="closeBtn" class="close-btn"> Back</button>
+    <div class="external">
+  <div class="horizontal-scroll-wrapper">
+    <div class="img-wrapper slower">
+      <a href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/" target="_blank" rel="noopener"><img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-cafe-terrace.jpg" alt="">
+      </a>
+    </div>
 
-  <h3 class="download-heading">Downloadable</h3>
+    <div class="img-wrapper faster">
+      <a href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/antiquedollboy.jpg" alt="">
+      </a>
+    </div>
 
-  <div class="download-buttons">
-    <a href="./files/rulebook.pdf" download class="download-btn">Rulebook</a>
-    <a href="./files/brochure.pdf" download class="download-btn">Brochure</a>
-    <a href="./files/abstract-form.pdf" download class="download-btn">Abstract Form</a>
+    <div class="img-wrapper slower vertical">
+      <a href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
+      </a>
+    </div>
+
+    <div class="img-wrapper slower slower-down">
+      <a href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/swanduckriver.jpg" alt="">
+      </a>
+    </div>
+
+    <div class="img-wrapper">
+      <a href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-terrace.jpg" alt="">
+      </a>
+    </div>
+
+    <div class="img-wrapper slower">
+      <a href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-seine-boat.jpg" alt="">
+      </a>
+    </div>
+
+    <div class="img-wrapper faster1">
+      <a href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/old-man-river.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="img-wrapper slower slower2">
+      <a href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="img-wrapper">
+      <a href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/street-scene-people.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="img-wrapper slower">
+      <a href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/notre-dame-river-boat.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="img-wrapper slower last">
+      <a href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/" target="_blank" rel="noopener">
+        <img class="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
+      </a>
+    </div>
+  </div>
+  
+</div>
+
+
   </div>
 </div>
+  
 
       <!-- Scroll Indicator -->
       <div class="scroll-indicator">
@@ -77,6 +160,8 @@
         </svg>
       </div>
     </div>
+
+
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

@@ -1,3 +1,7 @@
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 // First step
@@ -14,6 +18,7 @@ gsap.to(".overlay", {
   onComplete: () => {
     document.body.style.overflow = "visible";
     document.body.style.overflowX = "hidden";
+    
   },
 });
 
@@ -63,6 +68,15 @@ tl.to(
 );
 
 tl.to(
+  ".countdown",
+  {
+    opacity: 0,
+    duration: 0.5,
+  },
+  "<" // starts at the same time of previous animation
+);
+
+tl.to(
   ".hero-main-image",
   {
     opacity: 0,
@@ -88,7 +102,7 @@ mm.add("(min-width: 769px)", () => {
   tl.to(
     ".hero-main-container",
     {
-      backgroundSize: "80vh", // desktop default
+      backgroundSize: "70vh", // desktop default
       duration: 3,
     },
     "<+=0.2"
@@ -102,14 +116,14 @@ tl.fromTo(
     backgroundImage: `radial-gradient(
           circle at 50% 200vh,
           rgba(128, 0, 128, 0) 0,        
-rgba(0, 180, 0, 1) 90vh,       
-rgba(180, 255, 0, 1) 120vh,    
-rgba(40, 0, 40, 0) 150vh
+rgb(29, 161, 31) 90vh,       
+rgb(0, 100, 0) 120vh,    
+rgb(0, 70, 0)  150vh
         )`,
   },
   {
     backgroundImage: `radial-gradient(circle at 50% 3.9575vh,
-  rgb(2, 88, 37) 0vh,
+  rgb(23, 200, 32) 0vh,
   rgba(0, 180, 0, 1) 50.011vh,
   rgb(160, 255, 0) 90.0183vh,
   rgba(40, 0, 40, 0) 140.599vh
@@ -138,9 +152,6 @@ tl.to(
   },
   ">-1" // starts 1s before the previous animation ends
 );
-
-// logo purple
-
 
 
 
@@ -192,4 +203,32 @@ updateCountdown();
 
 // then every second
 setInterval(updateCountdown, 1000);
+
+
+// Wait for the DOM to load to ensure elements exist
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById('openBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  const galleryHero = document.getElementById('galleryh'); // The hero card
+  const galleryView = document.getElementById('gallery');  // The full grid
+
+  if (openBtn && closeBtn && galleryHero && galleryView) {
+    // Open Gallery
+    openBtn.addEventListener('click', () => {
+      galleryHero.classList.add('hidden');
+      galleryView.classList.remove('hidden');
+    });
+
+    // Close Gallery
+    closeBtn.addEventListener('click', () => {
+      galleryView.classList.add('hidden');
+      galleryHero.classList.remove('hidden');
+    });
+  } else {
+    console.error("Gallery elements not found!");
+  }
+});
+
+
+
 
